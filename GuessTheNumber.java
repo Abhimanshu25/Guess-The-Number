@@ -11,19 +11,19 @@ public class GuessTheNumber {
     public static void main(String[] args) {
         int rounds, totalScore = 0;
 
-        System.out.println("🎯 Welcome to the Guess The Number Game!");
+        System.out.println(" Welcome to the Guess The Number Game!");
         System.out.print("Enter number of rounds you want to play: ");
         rounds = sc.nextInt();
 
         for (int round = 1; round <= rounds; round++) {
-            System.out.println("\n👉 Round " + round + " of " + rounds);
+            System.out.println("\n Round " + round + " of " + rounds);
             int score = playRound();
             totalScore += score;
             System.out.println("Your score for this round: " + score);
         }
 
-        System.out.println("\n✅ Game Over!");
-        System.out.println("🎉 Total Score: " + totalScore + " out of " + (rounds * 100));
+        System.out.println("\n Game Over!");
+        System.out.println(" Total Score: " + totalScore + " out of " + (rounds * 100));
     }
 
     static int playRound() {
@@ -37,12 +37,12 @@ public class GuessTheNumber {
             attempts++;
 
             if (guess == target) {
-                System.out.println("🎊 Correct! You guessed the number in " + attempts + " attempt(s).");
+                System.out.println(" Correct! You guessed the number in " + attempts + " attempt(s).");
                 return calculateScore(attempts);
             } else if (guess < target) {
-                System.out.println("📉 Too low!");
+                System.out.println(" Too low!");
             } else {
-                System.out.println("📈 Too high!");
+                System.out.println(" Too high!");
             }
         }
 
